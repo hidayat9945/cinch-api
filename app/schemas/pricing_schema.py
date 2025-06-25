@@ -1,6 +1,6 @@
 from pydantic import BaseModel
-from .region import RegionSchema
-from .rental_period import RentalPeriodSchema
+from app.schemas.region import RegionSchema
+from app.schemas.rental_period import RentalPeriodSchema
 
 class PricingSchema(BaseModel):
     id: int

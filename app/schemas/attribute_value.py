@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from .attribute import AttributeSchema
+from app.schemas.attribute import AttributeSchema
 
 class AttributeValueSchema(BaseModel):
     id: int

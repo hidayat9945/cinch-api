@@ -1,8 +1,8 @@
 from typing import List, Optional
 from pydantic import BaseModel
-from .category import CategorySchema
-from .attribute_value import AttributeValueSchema
-from .pricing_schema import PricingSchema
+from app.schemas.category import CategorySchema
+from app.schemas.attribute_value import AttributeValueSchema
+from app.schemas.pricing_schema import PricingSchema
 
 class ProductSchema(BaseModel):
     id: int
