@@ -13,5 +13,5 @@ class ProductAttributeValue(Base, TimestampMixin):
     
     # relationships
     product = relationship("Product", back_populates="attribute_values")
-    attribute_value = relationship("AttributeValue", back_populates="product")
+    attribute_value = relationship("AttributeValue", back_populates="product_links")
     

@@ -2,6 +2,8 @@ from sqlalchemy import Column, ForeignKey, Integer, Numeric
 from sqlalchemy.orm import relationship
 from app.db.base import Base
 from app.db.timestamp_mixin import TimestampMixin
+from app.db.models.rental_periods import RentalPeriod
+from app.db.models.regions import Region
 
 class ProductPricing(Base, TimestampMixin):
     __tablename__ = "product_pricings"

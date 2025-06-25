@@ -2,6 +2,9 @@ from sqlalchemy import Column, ForeignKey, Integer, String, Text
 from sqlalchemy.orm import relationship
 from app.db.base import Base
 from app.db.timestamp_mixin import TimestampMixin
+from app.db.models.categories import Category
+from app.db.models.attribute_values import AttributeValue
+from app.db.models.product_pricings import ProductPricing
 
 class Product(Base, TimestampMixin):
     __tablename__ = "products"
@@ -14,6 +17,6 @@ class Product(Base, TimestampMixin):
     category_id = Column(Integer, ForeignKey("categories.id"), nullable=False)
 
     # relationships
-    category = relationship("Category", back_populates="product")
-    attribute_values = relationship("AttributeValues", back_populates="product", cascade="all, delete-orphan")
+    category = relationship("Category", back_populates="products")
+    attribute_values = relationship("ProductAttributeValue", back_populates="product", cascade="all, delete-orphan")
     pricings = relationship("ProductPricing", back_populates="product", cascade="all, delete-orphan")
