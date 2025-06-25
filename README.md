@@ -45,6 +45,7 @@ To set up the project, follow these steps:
     ```bash
     python init_db.py
     ```
+    This will create all the tables in the database as defined in the models. ![ERD](ERD.png)
 
 3. Seed dummy data
 
