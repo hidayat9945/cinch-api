@@ -1,7 +1,7 @@
 from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
-from ..base import Base
-from ..timestamp_mixin import TimestampMixin
+from app.db.base import Base
+from app.db.timestamp_mixin import TimestampMixin
 
 class AttributeValue(Base, TimestampMixin):
     __tablename__ = "attribute_values"
